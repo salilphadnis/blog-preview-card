@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+* {
+  padding: 0;
+  margin: 0;
+}
+    body {
+      /*make the body a flexbox so that the container can be
+      placed in the middle of the page */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /*I don't understand min-height, but if I take it out,
+      the container goes all the way to the top of the page */
+      min-height: 100vh;   
+
+      font-family: "Outfit", serif;
+      background-color: hsl(47, 88%, 63%);
+    }
+
+    /* Container that holds everything */
+    .container {
+      max-width: 300px;
+      background-color: white;
+      border-radius: 10px;
+      border: 1px solid;
+      box-shadow: 5px 5px;
+      padding: 15px;
+
+    }
+
+    /*space outside the container*/
+    .container > div {
+      margin-bottom: 10px;
+    }
+
+  
+    /* The box that holds the learning tag of the blog */
+    .learning {
+      /* Align text in the middle of the box */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 80px;
+      height: 30px;
+      border-radius: 5px;
+
+      background-color: hsl(47, 88%, 63%);
+      font-weight: 500;
+
+
+    }
+
+    /* If I don't do this, then the image spills outside of the container  */
+    .container div img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  
+    /* Make the footer a flexbox so that the divs can be aligned */
+    .footer {
+      padding-top: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    /*Reduce the size of the icon*/
+    .footer > img {
+      max-width:15%;
+    }
+    
+    /* Put some space between the icon and the paragraph */
+    .footer > p {
+      margin: 10px;
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    /* The description text */
+    .text {
+      color: hsl(0, 0%, 42%);
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <section class="container">
+
+    <div>
+      <img src="assets/images/illustration-article.svg">
+    </div>
+
+    <div class = "learning">
+      Learning
+    </div>
+
+    <div>
+      Published 21 Dec 2023
+    </div>
+    
+    <div>
+      <h3>HTML & CSS foundations</h3>
+    </div>
+
+    <!-- Assign the paragraph a class so that the text can be formatted -->
+    <div class="text">
+      <p> 
+        These languages are the backbone of every website, 
+        defining structure, content, and presentation.
+      </p>
+    </div>  
+
+    <!-- I could use the <footer> tag here instead of div -->
+    <div class="footer">
+      <img class="footer-image" src="assets/images/image-avatar.webp">
+      <p>
+        Greg Hooper
+      </p>
+    </div>
+  
+  </section>
+
+
+</body>
+</html>
